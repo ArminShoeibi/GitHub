@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/libs/jquery/",
+      "files": [
+        "jquery.min.js",
+        "jquery.min.map"
+      ]
+    },
+    {
+      "library": "nprogress@0.2.0",
+      "destination": "wwwroot/libs/nprogress/",
+      "files": [
+        "nprogress.min.js",
+        "nprogress.min.css"
+      ]
+    },
+    {
+      "library": "jquery.pjax@2.0.1",
+      "destination": "wwwroot/libs/jquery-pjax/",
+      "files": [
+        "jquery.pjax.min.js.map",
+        "jquery.pjax.min.js"
+      ]
+    },
+    {
+      "library": "twitter-bootstrap@4.6.0",
+      "destination": "wwwroot/libs/bootstrap/",
+      "files": [
+        "js/bootstrap.bundle.min.js",
+        "js/bootstrap.bundle.min.js.map",
+        "css/bootstrap.min.css.map",
+        "css/bootstrap.min.css"
+      ]
+    }
+  ]
+}

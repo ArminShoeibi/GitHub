@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link href="~/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/libs/nprogress/nprogress.min.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" target="_blank">GitHub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#github-navbar" aria-controls="github-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="github-navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" asp-action="Index" asp-controller="Home" >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index" asp-controller="Plans">Plans</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="pjax-container" class="container">
+        @RenderBody()
+    </main>
+
+
+    <script src="~/libs/jquery/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/libs/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="~/libs/jquery-pjax/jquery.pjax.min.js" asp-append-version="true"></script>
+    <script src="~/libs/nprogress/nprogress.min.js" asp-append-version="true"></script>
+
+    <script>
+        $(document).pjax('ul a', '#pjax-container');
+        $(document).on('pjax:start', function () { NProgress.start(); });
+        $(document).on('pjax:end', function () { NProgress.done(); });
+    </script>
+
+</body>
+</html>
