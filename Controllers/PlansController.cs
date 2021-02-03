@@ -13,6 +13,5 @@ namespace GitHub.Controllers
             await Task.Delay(1000); // just for simulating 
             return View();
         }
-        public IActionResult CreatePlan() => View();
     }
 }
